@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajmal Shan P. | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .portfolio-container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            width: 80%;
+            max-width: 900px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background-color: #283655;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+
+        .header h1 {
+            margin: 10px 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .header .contact-info {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            text-align: right;
+        }
+
+        .header .contact-info a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .header .contact-info a:hover {
+            color: #00a8cc;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #283655;
+            font-size: 1.8em;
+            border-bottom: 3px solid #00a8cc;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .projects, .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .project, .skill {
+            background-color: #e0e0eb;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        .social-links a {
+            font-size: 1.5em;
+            color: #283655;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #00a8cc;
+        }
+
+        footer {
+            background-color: #283655;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+
+        <div class="header">
+            <img src="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" alt="Ajmal Shan P.">
+            <h1>Ajmal Shan P.</h1>
+            <p>BTech Student | AI & Data Science</p>
+
+            
+            <div class="contact-info">
+                <a href="tel:+918606496666">+91 8606496666</a>
+                <a href="mailto:ajmalshan2233@gmail.com">ajmalshan2233@gmail.com</a>
+            </div>
+        </div>
+
+        
+        <div class="content">
+            
+            <div class="section" id="about">
+                <h2>About Me</h2>
+                <p>Hi there! I'm Ajmal Shan P., a third-year BTech student specializing in Artificial Intelligence and Data Science. While I may not have perfect coding skills, my focus is on delivering impactful projects that make a difference. I’m passionate about applying technology to solve real-world challenges, and I love taking on projects that push me to grow as both a developer and a problem-solver. If you ever need guidance or assistance, don’t hesitate to reach out—I’d be more than happy to connect!</p>
+            </div>
+
+            
+            <div class="section" id="projects">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <strong>Plant Disease Detection Website</strong>
+                        <p>A machine learning-based web application that helps farmers identify plant diseases by analyzing images of plant leaves.</p>
+                    </div>
+                    <div class="project">
+                        <strong>Depression Detection</strong>
+                        <p>An NLP and ML-based solution for identifying depression levels from emotions using a decision tree algorithm.</p>
+                    </div>
+                    <div class="project">
+                        <strong>HOLOMOVER</strong>
+                        <p>A gesture-controlled holographic interface using Python, OpenCV, and Mediapipe to enhance interaction in online presentations, laptops, and gaming environments.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="section" id="skills">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div class="skill">Machine Learning</div>
+                    <div class="skill">Data Analysis</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">Web Development</div>
+                    <div class="skill">Problem Solving</div>
+                </div>
+            </div>
+
+            
+            <div class="section" id="contact">
+                <h2>Contact Me</h2>
+                <div class="social-links">
+                    <a href="https://github.com/Sha-330" target="_blank">GitHub</a>
+                    <a href="https://wa.me/+918606496666" target="_blank">WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/ajmal-shan-p-591258244" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+       
+        <footer>
+            <p>&copy; 2024 Ajmal Shan P.</p>
+        </footer>
+    </div>
+</body>
+</html>
