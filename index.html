@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajmal Shan P. | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-2uUQX4U4VFb0b5F9kuc2Gp8r8U3i8C1+17k0w3dY4lIl8/o8IbsmLsH48fEX3hX6k6vAORguC1uShAFsyKo4sZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Portfolio of Ajmal Shan P., BTech student specializing in AI & Data Science">
+    <meta name="keywords" content="AI, Data Science, Portfolio, BTech, Machine Learning">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" as="image">
     <style>
+        :root {
+            --primary-color: #ff5733;
+            --secondary-color: #333;
+            --bg-color: #f4f4f9;
+            --card-bg: #e0e0eb;
+            --card-hover-bg: #d3f2ff;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
             display: flex;
@@ -22,14 +32,14 @@
             background-color: #fff;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 900px;
+            width: 90%;
+            max-width: 1000px;
             overflow: hidden;
             position: relative;
         }
 
         .header {
-            background-color: #333;
+            background-color: var(--secondary-color);
             color: white;
             padding: 30px;
             text-align: center;
@@ -37,141 +47,203 @@
 
         .header img {
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border: 5px solid #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .header img:hover {
+            transform: scale(1.1);
         }
 
         .header h1 {
-            margin: 10px 0;
-            font-size: 2.2em;
+            margin: 15px 0;
+            font-size: 2.5em;
         }
 
         .header p {
             margin: 5px 0;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-style: italic;
         }
 
         .contact-info a {
-            display: block;
+            display: inline-block;
             color: #fff;
             text-decoration: none;
-            margin-bottom: 10px;
-            font-size: 1em;
+            margin: 10px;
+            font-size: 1.1em;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
         }
 
         .content {
-            padding: 20px;
+            padding: 30px;
         }
 
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .section h2 {
-            color: #333;
-            font-size: 1.8em;
-            border-bottom: 3px solid #ff5733;
+            color: var(--secondary-color);
+            font-size: 2em;
+            border-bottom: 3px solid var(--primary-color);
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .section p {
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.6;
         }
 
-        .projects, .skills, .car-projects {
+        .projects, .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
         }
 
-        .project, .skill, .car-project {
-            background-color: #e0e0eb;
-            padding: 15px;
+        .project, .skill {
+            background-color: var(--card-bg);
+            padding: 20px;
             border-radius: 10px;
             flex: 1;
             min-width: 250px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
         }
 
-        .project:hover, .skill:hover, .car-project:hover {
-            transform: scale(1.05);
+        .project:hover, .skill:hover {
+            transform: translateY(-5px) scale(1.03);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            background-color: #d3f2ff;
+            background-color: var(--card-hover-bg);
         }
 
-        .project a, .car-project a {
-            color: #333;
+        .project a {
+            color: var(--secondary-color);
             font-weight: bold;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .project a:hover, .car-project a:hover {
-            color: #ff5733;
+        .project a:hover {
+            color: var(--primary-color);
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin: 15px 0;
+            gap: 20px;
+            margin: 20px 0;
         }
+        
+        .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased gap between icons */
+    margin: 30px 0;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    font-size: 1.8em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.social-links a i {
+    margin-bottom: 8px;
+    font-size: 2em;
+}
+
+.social-links a span {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Specific colors for each social media */
+.social-links .github {
+    color: #333;
+}
+
+.social-links .whatsapp {
+    color: #25D366;
+}
+
+.social-links .linkedin {
+    color: #0077B5;
+}
 
         .social-links a {
-            color: #333;
-            font-size: 1.5em;
-            transition: color 0.3s;
+            color: var(--secondary-color);
+            font-size: 1.8em;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .social-links a:hover {
-            color: #ff5733;
+            color: var(--primary-color);
+            transform: scale(1.2);
         }
 
         .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
 
         .contact-form input,
         .contact-form textarea {
-            padding: 10px;
+            padding: 12px;
             border-radius: 5px;
             border: 1px solid #ccc;
-            font-size: 1em;
+            font-size: 1.1em;
         }
 
         .contact-form button {
-            padding: 10px;
-            background-color: #ff5733;
+            padding: 12px;
+            background-color: var(--primary-color);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .contact-form button:hover {
             background-color: #e75a3e;
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #333;
+            background-color: var(--secondary-color);
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
+            font-size: 1.1em;
         }
 
         footer a {
-            color: #ff5733;
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -179,27 +251,39 @@
         footer a:hover {
             color: #ffa500;
         }
+
+        @media (max-width: 768px) {
+            .portfolio-container {
+                width: 95%;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .section h2 {
+                font-size: 1.8em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="portfolio-container">
-        <div class="header">
-            <img src="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" alt="Ajmal Shan P. - Profile Picture">
+        <header class="header">
+            <img src="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" alt="Ajmal Shan P. - Professional headshot">
             <h1>Ajmal Shan P.</h1>
             <p>BTech Student | AI & Data Science Enthusiast</p>
             <div class="contact-info">
-                <a href="tel:+918606496666">+91 8606496666</a>
-                <a href="mailto:ajmalshan2233@gmail.com">ajmalshan2233@gmail.com</a>
+                <a href="tel:+918606496666"><i class="fas fa-phone"></i> +91 8606496666</a>
+                <a href="mailto:ajmalshan2233@gmail.com"><i class="fas fa-envelope"></i> ajmalshan2233@gmail.com</a>
             </div>
-        </div>
+        </header>
 
-        <div class="content">
-            <div class="section" id="about">
+        <main class="content">
+            <section class="section" id="about">
                 <h2>About Me</h2>
-                <p>I'm Ajmal Shan P., a third-year BTech student specializing in Artificial Intelligence and Data Science. I'm passionate about projects that make an impact, and I'm driven to leverage my skills to create real-world solutions.</p>
-            </div>
+                <p>I'm Ajmal Shan P., a third-year BTech student specializing in Artificial Intelligence and Data Science. Passionate about creating impact through projects, I'm driven to leverage my skills to create real-world solutions.</p>
+            </section>
 
-            <div class="section" id="projects">
+            <section class="section" id="projects">
                 <h2>Projects</h2>
                 <div class="projects">
                     <div class="project">
@@ -215,28 +299,55 @@
                         <p>A holographic gesture-controlled interface using Python, OpenCV, and Mediapipe for digital interactions.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="section" id="contact">
-                <h2>Contact Me</h2>
-                <div class="social-links">
-                    <a href="https://github.com/Sha-330" target="_blank" aria-label="GitHub">GitHub<i class="fa-brands fa-github"></i></a>
-                    <a href="https://wa.me/+918606496666" target="_blank" aria-label="WhatsApp">WhatsApp<i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/ajmal-shan-p-591258244" target="_blank" aria-label="LinkedIn">LinkedIn<i class="fa-brands fa-linkedin"></i></a>
+            <section class="section" id="skills">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div class="skill">AI & Machine Learning</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">Communication</div>
+                    <div class="skill">Leadership</div>
+                    <div class="skill">Data Science</div>
+                    <div class="skill">Web Development</div>
                 </div>
+            </section>
+
+            <section class="section" id="contact">
+                <h2>Contact Me</h2>
+<div class="social-links">
+    <a href="https://github.com/Sha-330" target="_blank" class="github" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+    </a>
+    <a href="https://wa.me/+918606496666" target="_blank" class="whatsapp" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+    <a href="https://www.linkedin.com/in/ajmal-shan-p-591258244" target="_blank" class="linkedin" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+    </a>
+</div>
                 <form class="contact-form">
                     <input type="text" placeholder="Your Name" required aria-label="Your Name">
                     <input type="email" placeholder="Your Email" required aria-label="Your Email">
                     <textarea placeholder="Your Message" rows="4" required aria-label="Your Message"></textarea>
                     <button type="submit">Send Message</button>
-                    
                 </form>
-            </div>
-        </div>
-                
+            </section>
+        </main>
+
         <footer>
             <p>&copy; 2024 Ajmal Shan P. | All Rights Reserved</p>
         </footer>
     </div>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add form submission logic here
+        });
+    </script>
 </body>
 </html>
