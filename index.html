@@ -141,97 +141,49 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin: 20px 0;
+            margin: 30px 0;
         }
         
-        .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Increased gap between icons */
-    margin: 30px 0;
-}
-
-.social-links a {
-    color: var(--secondary-color);
-    font-size: 1.8em;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-
-.social-links a i {
-    margin-bottom: 8px;
-    font-size: 2em;
-}
-
-.social-links a span {
-    font-size: 0.8em;
-    margin-top: 5px;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-5px);
-    background-color: #f5f5f5;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Specific colors for each social media */
-.social-links .github {
-    color: #333;
-}
-
-.social-links .whatsapp {
-    color: #25D366;
-}
-
-.social-links .linkedin {
-    color: #0077B5;
-}
-
         .social-links a {
             color: var(--secondary-color);
             font-size: 1.8em;
-            transition: color 0.3s, transform 0.3s;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .social-links a i {
+            margin-bottom: 8px;
+            font-size: 2em;
+        }
+
+        .social-links a span {
+            font-size: 0.8em;
+            margin-top: 5px;
         }
 
         .social-links a:hover {
             color: var(--primary-color);
-            transform: scale(1.2);
+            transform: translateY(-5px);
+            background-color: #f5f5f5;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        /* Specific colors for each social media */
+        .social-links .github {
+            color: #333;
         }
 
-        .contact-form input,
-        .contact-form textarea {
-            padding: 12px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1.1em;
+        .social-links .whatsapp {
+            color: #25D366;
         }
 
-        .contact-form button {
-            padding: 12px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #e75a3e;
-            transform: scale(1.05);
+        .social-links .linkedin {
+            color: #0077B5;
         }
 
         footer {
@@ -252,15 +204,23 @@
             color: #ffa500;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .portfolio-container {
-                width: 95%;
-            }
             .header h1 {
                 font-size: 2em;
             }
+            .header p {
+                font-size: 1.1em;
+            }
             .section h2 {
                 font-size: 1.8em;
+            }
+            .section p {
+                font-size: 1em;
+            }
+            .projects, .skills {
+                flex-direction: column; /* Stack projects and skills vertically */
+                align-items: center; /* Center align */
             }
         }
     </style>
@@ -268,86 +228,68 @@
 <body>
     <div class="portfolio-container">
         <header class="header">
-            <img src="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" alt="Ajmal Shan P. - Professional headshot">
+            <img src="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" alt="Ajmal Shan P.">
             <h1>Ajmal Shan P.</h1>
-            <p>BTech Student | AI & Data Science Enthusiast</p>
-            <div class="contact-info">
-                <a href="tel:+918606496666"><i class="fas fa-phone"></i> +91 8606496666</a>
-                <a href="mailto:ajmalshan2233@gmail.com"><i class="fas fa-envelope"></i> ajmalshan2233@gmail.com</a>
-            </div>
+            <p>BTech Student | AI & Data Science</p>
         </header>
-
-        <main class="content">
-            <section class="section" id="about">
+        <div class="contact-info">
+            <div class="social-links">
+                <a href="https://github.com/Sha-330" target="_blank" class="github"><i class="fab fa-github"></i><span>GitHub</span></a>
+                <a href="https://www.linkedin.com/in/ajmal-shan-p-591258244" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                <a href="https://wa.me/918606496666" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section" id="about">
                 <h2>About Me</h2>
-                <p>I'm Ajmal Shan P., a third-year BTech student specializing in Artificial Intelligence and Data Science. Passionate about creating impact through projects, I'm driven to leverage my skills to create real-world solutions.</p>
-            </section>
-
-            <section class="section" id="projects">
+                <p>I am a passionate BTech student specializing in Artificial Intelligence and Data Science. My goal is to leverage cutting-edge technology to solve real-world problems.</p>
+            </div>
+            <div class="section" id="projects">
                 <h2>Projects</h2>
                 <div class="projects">
                     <div class="project">
-                        <strong><a href="#">PLANT DISEASE DETECTION WEBSITE</a></strong>
-                        <p>A machine learning-based web app to help farmers detect plant diseases through leaf images.</p>
+                        <h3>HOLOMOVER</h3>
+                        <p>A gesture-controlled system for online presentations and gaming, developed using Python, OpenCV, and Mediapipe.</p>
+                        <a href="#" target="_blank">View Project</a>
                     </div>
                     <div class="project">
-                        <strong><a href="#">DEPRESSION DETECTION</a></strong>
-                        <p>NLP & ML tool for identifying depression levels from emotions using decision tree algorithms.</p>
+                        <h3>Plant Disease Identifier</h3>
+                        <p>A web application that uses ML to help gardeners identify plant diseases through leaf images.</p>
+                        <a href="#" target="_blank">View Project</a>
                     </div>
                     <div class="project">
-                        <strong><a href="#">HOLOMOVER</a></strong>
-                        <p>A holographic gesture-controlled interface using Python, OpenCV, and Mediapipe for digital interactions.</p>
+                        <h3>Depression Detection</h3>
+                        <p>A project that detects depression from emotions using a decision tree algorithm.</p>
+                        <a href="#" target="_blank">View Project</a>
                     </div>
                 </div>
-            </section>
-
-            <section class="section" id="skills">
+            </div>
+            <div class="section" id="skills">
                 <h2>Skills</h2>
                 <div class="skills">
-                    <div class="skill">AI & Machine Learning</div>
-                    <div class="skill">Python</div>
-                    <div class="skill">Communication</div>
-                    <div class="skill">Leadership</div>
-                    <div class="skill">Data Science</div>
-                    <div class="skill">Web Development</div>
+                    <div class="skill"><h3>Machine Learning</h3></div>
+                    <div class="skill"><h3>Data Visualization</h3></div>
+                    <div class="skill"><h3>Python</h3></div>
+                    <div class="skill"><h3>Web Development</h3></div>
+                    <div class="skill"><h3>Cybersecurity</h3></div>
+                    <div class="skill"><h3>Embedded Systems</h3></div>
                 </div>
-            </section>
-
-            <section class="section" id="contact">
-                <h2>Contact Me</h2>
-<div class="social-links">
-    <a href="https://github.com/Sha-330" target="_blank" class="github" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-        <span>GitHub</span>
-    </a>
-    <a href="https://wa.me/+918606496666" target="_blank" class="whatsapp" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp</span>
-    </a>
-    <a href="https://www.linkedin.com/in/ajmal-shan-p-591258244" target="_blank" class="linkedin" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-        <span>LinkedIn</span>
-    </a>
-</div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required aria-label="Your Name">
-                    <input type="email" placeholder="Your Email" required aria-label="Your Email">
-                    <textarea placeholder="Your Message" rows="4" required aria-label="Your Message"></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </section>
-        </main>
-
+            </div>
+            <div class="section" id="roles">
+                <h2>Roles</h2>
+                <p>I held the following positions, each contributing to my growth and leadership skills:</p>
+                <ul>
+                    <li>Senior Rover Mate at SRM Kottakal Open Rover Crew</li>
+                    <li>Co-Lead of the Game Development Club (GDC) at ICET</li>
+                    <li>Department Representative(AD) for the Student Union - ICET</li>
+                    <li>Vice-chairperson (2023-24) Student branch- IEEE-ICET</li>
+                    
+                </ul>
+            </div>
+        </div>
         <footer>
-            <p>&copy; 2024 Ajmal Shan P. | All Rights Reserved</p>
+            <p>© 2024 Ajmal Shan P. | All Rights Reserved</p>
         </footer>
     </div>
-
-    <script>
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Add form submission logic here
-        });
-    </script>
 </body>
 </html>
