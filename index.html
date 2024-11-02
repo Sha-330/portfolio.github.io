@@ -28,11 +28,10 @@
         }
 
         .header {
-            background-color: #283655;
+            background-color: #333; /* Dark background for a professional look */
             color: white;
             padding: 30px;
             text-align: center;
-            position: relative;
         }
 
         .header img {
@@ -54,24 +53,13 @@
             font-style: italic;
         }
 
-        .header .contact-info {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            text-align: right;
-        }
-
-        .header .contact-info a {
+        .contact-info a {
             display: block;
             color: #fff;
             text-decoration: none;
             margin-bottom: 10px;
             font-size: 1em;
             font-weight: bold;
-        }
-
-        .header .contact-info a:hover {
-            color: #00a8cc;
         }
 
         .content {
@@ -83,9 +71,9 @@
         }
 
         .section h2 {
-            color: #283655;
+            color: #333;
             font-size: 1.8em;
-            border-bottom: 3px solid #00a8cc;
+            border-bottom: 3px solid #ff5733; /* Accent color */
             display: inline-block;
             margin-bottom: 10px;
         }
@@ -95,142 +83,55 @@
             line-height: 1.6;
         }
 
-        .projects, .skills {
+        .projects, .skills, .car-projects {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
         }
 
-        .project, .skill {
+        .project, .skill, .car-project {
             background-color: #e0e0eb;
             padding: 15px;
             border-radius: 10px;
             flex: 1;
             min-width: 250px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .project:hover, .skill:hover {
+        .project:hover, .skill:hover, .car-project:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0,0,0,0.2);
             background-color: #d3f2ff; /* Light blue on hover */
         }
 
-        .project a {
-            color: #283655;
+        .project a, .car-project a {
+            color: #333;
             font-weight: bold;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .project a:hover {
-            color: #00a8cc; /* Blue color for project links on hover */
+        .project a:hover, .car-project a:hover {
+            color: #ff5733; /* Accent color for project links on hover */
         }
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-            font-size: 1.5em;
-            justify-content: center;
-        }
-
-        .social-links a {
-            color: #283655;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #00a8cc; /* Blue color for social links on hover */
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .gallery img {
-            width: 100%;
-            max-width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: flex-start;
-            gap: 15px;
-        }
-
-        .social-links a {
-            font-size: 0.8em;
-            color: #283655;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            color: #00a8cc;
-        }
-
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-size: 1em;
-            transition: border-color 0.3s;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: #00a8cc; /* Blue border on focus */
-        }
-
-        .contact-form button {
-            padding: 10px;
-            border: none;
-            background-color: #283655;
-            color: white;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            border-radius: 5px;
-        }
-
-        .contact-form button:hover {
-            background-color: #00a8cc; /* Light blue color on hover */
-        }
 
         footer {
-            background-color: #283655;
+            background-color: #333; /* Dark footer */
             color: white;
             text-align: center;
             padding: 10px 0;
         }
 
         footer a {
-            color: #00a8cc;
+            color: #ff5733;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         footer a:hover {
-            color: #ff8c00; /* Orange color for footer links on hover */
-            text-decoration: underline;
+            color: #ffa500; /* Lighter orange for footer links on hover */
         }
 
     </style>
@@ -257,11 +158,11 @@
                 <h2>Projects</h2>
                 <div class="projects">
                     <div class="project">
-                        <strong><a href="#">Plant Disease Detection Website</a></strong>
+                        <strong><a href="#">PLANT DISEASE DETECTION WEBSITE</a></strong>
                         <p>A machine learning-based web app to help farmers detect plant diseases through leaf images.</p>
                     </div>
                     <div class="project">
-                        <strong><a href="#">Depression Detection</a></strong>
+                        <strong><a href="#">DEPRESSION DETECTION</a></strong>
                         <p>NLP & ML tool for identifying depression levels from emotions using decision tree algorithms.</p>
                     </div>
                     <div class="project">
@@ -271,31 +172,16 @@
                 </div>
             </div>
 
-            <div class="section" id="skills">
-                <h2>Skills</h2>
-                <div class="skills">
-                    <div class="skill">Machine Learning</div>
-                    <div class="skill">Data Analysis</div>
-                    <div class="skill">Python</div>
-                    <div class="skill">Web Development</div>
-                    <div class="skill">Problem Solving</div>
-                </div>
-            </div>
-
-            <div class="section" id="gallery">
-                <h2>Image Gallery</h2>
-                <div class="gallery">
-                    <img src="https://ucarecdn.com/your_image_link_1.jpg" alt="Project Image 1">
-                    <img src="https://ucarecdn.com/your_image_link_2.jpg" alt="Project Image 2">
-                    <img src="https://ucarecdn.com/your_image_link_3.jpg" alt="Project Image 3">
-                </div>
-            </div>
 
             <div class="section" id="contact">
                 <h2>Contact Me</h2>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                    <div class="social-links">
+                     <i class="fa-brands fa-github-alt"></i> 
                     <a href="https://github.com/Sha-330" target="_blank">GitHub</a>
+                    <i class="fa-brands fa-whatsapp"></i>
                     <a href="https://wa.me/+918606496666" target="_blank">WhatsApp</a>
+                    <i class="fa-brands fa-linkedin"></i>
                     <a href="https://www.linkedin.com/in/ajmal-shan-p-591258244" target="_blank">LinkedIn</a>
                 </div>
                 <form class="contact-form">
@@ -308,8 +194,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2024 Ajmal Shan P. | <a href="#">Back to Top</a></p>
-        </footer>
-    </div>
+        <p>&copy; 2024 Ajmal Shan P. | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
