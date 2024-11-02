@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
             margin: 0;
             padding: 0;
@@ -37,15 +37,15 @@
 
         .header img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
             border: 5px solid #fff;
         }
 
         .header h1 {
             margin: 10px 0;
-            font-size: 2.5em;
+            font-size: 2.2em;
         }
 
         .header p {
@@ -108,6 +108,61 @@
             flex: 1;
             min-width: 250px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+
+        .project:hover, .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            background-color: #d3f2ff; /* Light blue on hover */
+        }
+
+        .project a {
+            color: #283655;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .project a:hover {
+            color: #00a8cc; /* Blue color for project links on hover */
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            font-size: 1.5em;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #283655;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00a8cc; /* Blue color for social links on hover */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .social-links {
@@ -117,7 +172,7 @@
         }
 
         .social-links a {
-            font-size: 1.5em;
+            font-size: 0.8em;
             color: #283655;
             text-decoration: none;
         }
@@ -126,57 +181,96 @@
             color: #00a8cc;
         }
 
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #00a8cc; /* Blue border on focus */
+        }
+
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            background-color: #283655;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #00a8cc; /* Light blue color on hover */
+        }
+
         footer {
             background-color: #283655;
             color: white;
             text-align: center;
             padding: 10px 0;
         }
+
+        footer a {
+            color: #00a8cc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ff8c00; /* Orange color for footer links on hover */
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
     <div class="portfolio-container">
-
         <div class="header">
             <img src="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" alt="Ajmal Shan P.">
             <h1>Ajmal Shan P.</h1>
-            <p>BTech Student | AI & Data Science</p>
-
-            
+            <p>BTech Student | AI & Data Science Enthusiast</p>
             <div class="contact-info">
                 <a href="tel:+918606496666">+91 8606496666</a>
                 <a href="mailto:ajmalshan2233@gmail.com">ajmalshan2233@gmail.com</a>
             </div>
         </div>
 
-        
         <div class="content">
-            
             <div class="section" id="about">
                 <h2>About Me</h2>
-                <p>Hi there! I'm Ajmal Shan P., a third-year BTech student specializing in Artificial Intelligence and Data Science. While I may not have perfect coding skills, my focus is on delivering impactful projects that make a difference. I’m passionate about applying technology to solve real-world challenges, and I love taking on projects that push me to grow as both a developer and a problem-solver. If you ever need guidance or assistance, don’t hesitate to reach out—I’d be more than happy to connect!</p>
+                <p>I'm Ajmal Shan P., a third-year BTech student specializing in Artificial Intelligence and Data Science. I'm passionate about projects that make an impact, and I'm driven to leverage my skills to create real-world solutions.</p>
             </div>
 
-            
             <div class="section" id="projects">
                 <h2>Projects</h2>
                 <div class="projects">
                     <div class="project">
-                        <strong>Plant Disease Detection Website</strong>
-                        <p>A machine learning-based web application that helps farmers identify plant diseases by analyzing images of plant leaves.</p>
+                        <strong><a href="#">Plant Disease Detection Website</a></strong>
+                        <p>A machine learning-based web app to help farmers detect plant diseases through leaf images.</p>
                     </div>
                     <div class="project">
-                        <strong>Depression Detection</strong>
-                        <p>An NLP and ML-based solution for identifying depression levels from emotions using a decision tree algorithm.</p>
+                        <strong><a href="#">Depression Detection</a></strong>
+                        <p>NLP & ML tool for identifying depression levels from emotions using decision tree algorithms.</p>
                     </div>
                     <div class="project">
-                        <strong>HOLOMOVER</strong>
-                        <p>A gesture-controlled holographic interface using Python, OpenCV, and Mediapipe to enhance interaction in online presentations, laptops, and gaming environments.</p>
+                        <strong><a href="#">HOLOMOVER</a></strong>
+                        <p>A holographic gesture-controlled interface using Python, OpenCV, and Mediapipe for digital interactions.</p>
                     </div>
                 </div>
             </div>
 
-            
             <div class="section" id="skills">
                 <h2>Skills</h2>
                 <div class="skills">
@@ -188,20 +282,33 @@
                 </div>
             </div>
 
-            
+            <div class="section" id="gallery">
+                <h2>Image Gallery</h2>
+                <div class="gallery">
+                    <img src="https://ucarecdn.com/your_image_link_1.jpg" alt="Project Image 1">
+                    <img src="https://ucarecdn.com/your_image_link_2.jpg" alt="Project Image 2">
+                    <img src="https://ucarecdn.com/your_image_link_3.jpg" alt="Project Image 3">
+                </div>
+            </div>
+
             <div class="section" id="contact">
                 <h2>Contact Me</h2>
-                <div class="social-links">
+                   <div class="social-links">
                     <a href="https://github.com/Sha-330" target="_blank">GitHub</a>
                     <a href="https://wa.me/+918606496666" target="_blank">WhatsApp</a>
                     <a href="https://www.linkedin.com/in/ajmal-shan-p-591258244" target="_blank">LinkedIn</a>
                 </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </div>
 
-       
         <footer>
-            <p>&copy; 2024 Ajmal Shan P.</p>
+            <p>&copy; 2024 Ajmal Shan P. | <a href="#">Back to Top</a></p>
         </footer>
     </div>
 </body>
