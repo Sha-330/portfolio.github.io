@@ -291,7 +291,20 @@ Hi, I’m Ajmal Shan, but you can call me Sha. I’m a third-year BTech student 
         </div>
         <footer>
             <p>© 2024 Ajmal Shan P. | All Rights Reserved</p>
+            
+           <a href="#" onclick="accessAdmin()">Admin Page</a>
         </footer>
+
+        <script>
+    function accessAdmin() {
+        const password = prompt("Enter Admin Password:");
+        if (password === "catmouse") {
+            window.location.href = 'admin.html';
+        } else {
+            alert("Incorrect password.");
+        }
+    }
+    </script>
     </div>
 </body>
 </html>
