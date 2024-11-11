@@ -226,6 +226,29 @@
     </style>
 </head>
 <body>
+    <script>
+    // Function to record each visit
+    function recordVisit() {
+        // Get current visitors array from localStorage
+        const visitors = JSON.parse(localStorage.getItem('portfolio-visitors')) || [];
+
+        // Create a new visitor object with the current date
+        const newVisitor = {
+            name: 'Anonymous',  // You can customize this or capture visitor name
+            date: new Date().toLocaleString()  // Captures current date and time
+        };
+
+        // Add the new visitor to the array
+        visitors.push(newVisitor);
+
+        // Save updated visitor array back to localStorage
+        localStorage.setItem('portfolio-visitors', JSON.stringify(visitors));
+    }
+
+    // Record visit every time index.html is loaded
+    recordVisit();
+</script>
+
     <div class="portfolio-container">
         <header class="header">
             <img src="https://ucarecdn.com/3110cf46-fa3c-46e6-a234-cd3c9149ed60/Ajmal.jpg" alt="Ajmal Shan P.">
