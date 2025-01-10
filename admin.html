@@ -72,6 +72,7 @@
             font-size: 1.2em;
             color: #333;
         }
+
         model-viewer {
             width: 100%;
             height: 300px;
@@ -94,6 +95,7 @@
         footer a:hover {
             color: #e04b2c;
         }
+
         .content {
             padding: 30px;
         }
@@ -107,13 +109,20 @@
     <div class="admin-container">
         <h1>Admin Dashboard</h1>
         <div class="admin-content">
-            <p>"Privacy is like a secret sauce—you know it’s crucial for the recipe of a good life, but the minute you let someone in on it, they start asking for the ingredients. Suddenly, everyo[...]
+            <p>"Privacy is like a secret sauce—you know it’s crucial for the recipe of a good life, but the minute you let someone in on it, they start asking for the ingredients. Suddenly, everyone’s trying to cook up your personal business, and you’re left wondering if your life is a dinner party or a reality show!"</p>
         </div>
 
         <div id="visitor-list">
             <h2>List of Visitors:</h2>
             <div id="visitors"></div>
             <button class="admin-btn" onclick="clearVisitors()">Clear Visitors</button>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>3D Model</h2>
+                <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" auto-rotate camera-controls></model-viewer>
+            </div>
         </div>
 
         <footer>
@@ -153,12 +162,5 @@
             displayVisitors();
         };
     </script>
-    <header>
-        <div class="content">
-            <div class="section">
-                <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" auto-rotate camera-controls></model-viewer>
-            </div>
-        </div>
-    </header>
 </body>
 </html>
