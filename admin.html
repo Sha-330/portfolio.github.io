@@ -107,18 +107,13 @@
     <div class="admin-container">
         <h1>Admin Dashboard</h1>
         <div class="admin-content">
-            <p>"Privacy is like a secret sauce—you know it’s crucial for the recipe of a good life, but the minute you let someone in on it, they start asking for the ingredients. Suddenly, everyone’s trying to cook up your personal business, and you’re left wondering if your life is a dinner party or a reality show!".</p>
-            
-            
-           
+            <p>"Privacy is like a secret sauce—you know it’s crucial for the recipe of a good life, but the minute you let someone in on it, they start asking for the ingredients. Suddenly, everyo[...]
         </div>
 
-        
         <div id="visitor-list">
             <h2>List of Visitors:</h2>
-            <div id="visitors">
-                
-            </div>
+            <div id="visitors"></div>
+            <button class="admin-btn" onclick="clearVisitors()">Clear Visitors</button>
         </div>
 
         <footer>
@@ -127,13 +122,11 @@
     </div>
 
     <script>
-        
         function getVisitors() {
             const visitors = JSON.parse(localStorage.getItem('portfolio-visitors')) || [];
             return visitors;
         }
 
-       
         function displayVisitors() {
             const visitors = getVisitors();
             const visitorContainer = document.getElementById('visitors');
@@ -151,18 +144,21 @@
             }
         }
 
-        
+        function clearVisitors() {
+            localStorage.removeItem('portfolio-visitors');
+            displayVisitors();
+        }
+
         window.onload = function() {
             displayVisitors();
         };
     </script>
     <header>
-            <div class="content">
+        <div class="content">
             <div class="section">
-                
                 <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" auto-rotate camera-controls></model-viewer>
             </div>
         </div>
-        </header>
+    </header>
 </body>
 </html>
